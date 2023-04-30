@@ -6,7 +6,8 @@ export default defineConfig({
   history: {
     type: 'hash',
   },
-  antd: {},
+  antd: {
+  },
   access: {},
   model: {},
   initialState: {},
@@ -23,14 +24,14 @@ export default defineConfig({
       component: './Home',
     },
     {
-      name: '权限演示',
-      path: '/access',
-      component: './Access',
+      name: '韩薇娜',
+      path: '/nina',
+      component: './Nina',
     },
     {
-      name: ' CRUD 示例',
-      path: '/table',
-      component: './Table',
+      name: '徐静珂',
+      path: '/mika',
+      component: './Mika',
     },
   ],
 

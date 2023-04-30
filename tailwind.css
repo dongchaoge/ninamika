@@ -408,3 +408,7 @@ video {
 [hidden] {
     display: none;
 }
+
+body {
+    background-color: rgb(20, 20, 20)
+}
