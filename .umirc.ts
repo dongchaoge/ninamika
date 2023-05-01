@@ -33,6 +33,11 @@ export default defineConfig({
       path: '/mika',
       component: './Mika',
     },
+    {
+      name: '结尾',
+      path: '/ending',
+      component: './Ending',
+    },
   ],
 
   npmClient: 'pnpm',

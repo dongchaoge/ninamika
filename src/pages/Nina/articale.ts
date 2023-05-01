@@ -1,3 +1,35 @@
+export const partLength = 5;
+
+export const partName = ['序章', '第一章', '第二章', '第三章', '终章'];
+
+export const nextBtnName = ['开始调查', '继续', '继续', '继续', '落幕'];
+
+export const questionList = [
+  null,
+  {
+    dm: '先和旁边的人认知一下吧，然后输入下面这个问题的答案。',
+    question: 'Ninamika演讲那天穿的什么颜色的鞋子？',
+    verify(answer: string | undefined): boolean {
+      return !!answer?.includes('黑色');
+    },
+  },
+  {
+    dm: '先和旁边的人聊聊高中的最后一年吧，然后输入下面这个问题的答案。',
+    question: '比赛那天，Ninamika穿的什么颜色的外套？',
+    verify(answer: string | undefined): boolean {
+      return !!answer?.includes('白色');
+    },
+  },
+  {
+    dm: '先和旁边的人聊聊工作之后的事情，然后输入下面这个问题的答案。',
+    question: '你是谁？',
+    verify(answer: string | undefined): boolean {
+      return !!answer?.includes('inamika');
+    },
+  },
+  null,
+];
+
 export const zeroArticale = [
   'Ninamika 是一位著名的导演和摄影师，以其独特的视角和审美，在艺术圈内名声大赫。',
   '她在创作中表现出的赤心和生的力量让她的作品充满了张力和独特的气质，',
