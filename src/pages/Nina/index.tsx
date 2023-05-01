@@ -41,8 +41,11 @@ const Nina: React.FC = () => {
   return (
     <>
       {contextHolder}
-      <ArticleContainer>
-        <ArticleTitle title={`韩薇娜-${partName[part]}`} color="#007fdb" />
+      <ArticleContainer
+        processColor="var(--nina)"
+        percent={part / (partLength - 1) * 100}
+      >
+        <ArticleTitle title={`韩薇娜-${partName[part]}`} color="var(--nina)" />
         <ArticleContent articleList={partArticle[part]} />
         <ArticleNextBtn
           text={nextBtnName[part]}

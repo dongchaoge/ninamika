@@ -1,4 +1,3 @@
-import { useNavigate } from '@umijs/max';
 import { message } from 'antd';
 
 interface Props {
@@ -14,7 +13,6 @@ export default function useNextBtn({
 }: Props) {
   const [messageApi, contextHolder] = message.useMessage();
 
-  let navigate = useNavigate();
   const handleNext = (answer: string | undefined, part: number) => {
     if (!questionList[part] || questionList[part]?.verify(answer)) {
       window.scrollTo({
@@ -24,7 +22,7 @@ export default function useNextBtn({
       if (part < partLength - 1) {
         setPart(part + 1);
       } else {
-        navigate(`/ending`);
+        window.open(`${window.location.origin}/#/ending`)
       }
     } else {
       messageApi.open({

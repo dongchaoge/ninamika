@@ -41,8 +41,11 @@ const Mika: React.FC = () => {
   return (
     <>
       {contextHolder}
-      <ArticleContainer>
-        <ArticleTitle title={`徐静珂-${partName[part]}`} color="#11862f" />
+      <ArticleContainer
+        processColor="var(--mika)"
+        percent={part / (partLength - 1) * 100}
+      >
+        <ArticleTitle title={`徐静珂-${partName[part]}`} color="var(--mika)" />
         <ArticleContent articleList={partArticle[part]} />
         <ArticleNextBtn
           text={nextBtnName[part]}
