@@ -3,12 +3,14 @@ import { message } from 'antd';
 interface Props {
   questionList: any[];
   partLength: number;
+  name: string;
   setPart: (part: number) => void;
 }
 
 export default function useNextBtn({
   questionList,
   partLength,
+  name,
   setPart,
 }: Props) {
   const [messageApi, contextHolder] = message.useMessage();
@@ -22,7 +24,8 @@ export default function useNextBtn({
       if (part < partLength - 1) {
         setPart(part + 1);
       } else {
-        window.open(`${window.location.origin}/#/ending`)
+        localStorage.setItem(name, '1');
+        window.open(`${window.location.origin}/#/ending`);
       }
     } else {
       messageApi.open({

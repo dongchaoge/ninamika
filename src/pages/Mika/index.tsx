@@ -1,3 +1,4 @@
+import { ConfigProvider } from 'antd';
 import { useState } from 'react';
 
 import ArticleContainer from '@/components/ArticleContainer';
@@ -36,14 +37,21 @@ const Mika: React.FC = () => {
     questionList,
     partLength,
     setPart,
+    name: 'mika',
   });
 
   return (
-    <>
+    <ConfigProvider
+      theme={{
+        token: {
+          colorPrimary: '#11862f',
+        },
+      }}
+    >
       {contextHolder}
       <ArticleContainer
         processColor="var(--mika)"
-        percent={part / (partLength - 1) * 100}
+        percent={(part / (partLength - 1)) * 100}
       >
         <ArticleTitle title={`徐静珂-${partName[part]}`} color="var(--mika)" />
         <ArticleContent articleList={partArticle[part]} />
@@ -53,7 +61,7 @@ const Mika: React.FC = () => {
           onClick={(answer) => handleNext(answer, part)}
         />
       </ArticleContainer>
-    </>
+    </ConfigProvider>
   );
 };
 

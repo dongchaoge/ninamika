@@ -1,3 +1,4 @@
+import { ConfigProvider } from 'antd';
 import { useState } from 'react';
 
 import ArticleContainer from '@/components/ArticleContainer';
@@ -36,14 +37,21 @@ const Nina: React.FC = () => {
     questionList,
     partLength,
     setPart,
+    name: 'nina',
   });
 
   return (
-    <>
+    <ConfigProvider
+      theme={{
+        token: {
+          colorPrimary: '#007fdb',
+        },
+      }}
+    >
       {contextHolder}
       <ArticleContainer
         processColor="var(--nina)"
-        percent={part / (partLength - 1) * 100}
+        percent={(part / (partLength - 1)) * 100}
       >
         <ArticleTitle title={`韩薇娜-${partName[part]}`} color="var(--nina)" />
         <ArticleContent articleList={partArticle[part]} />
@@ -53,7 +61,7 @@ const Nina: React.FC = () => {
           onClick={(answer) => handleNext(answer, part)}
         />
       </ArticleContainer>
-    </>
+    </ConfigProvider>
   );
 };
 
