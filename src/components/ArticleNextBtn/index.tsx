@@ -20,11 +20,16 @@ const ArticleNextBtn = ({
   onPrevClick,
 }: Props) => {
   const [answer, setAnawer] = useState('');
+
+  const handleNextClick = () => {
+    onClick(answer);
+    setAnawer('');
+  };
   return (
     <>
       {question && (
         <div>
-          <div className="text-2xl text-white my-4">
+          <div className="text-2xl text-white mt-16">
             <h4>DM: {question.dm}</h4>
             <h4 className="mt-4">Question: {question.question}</h4>
           </div>
@@ -45,6 +50,7 @@ const ArticleNextBtn = ({
             <>
               <Input
                 onInput={(e: any) => setAnawer(e.target.value)}
+                value={answer}
                 className="h-[60px] text-2xl"
                 placeholder="请回答"
               />
@@ -53,7 +59,7 @@ const ArticleNextBtn = ({
         </div>
         {text && (
           <Button
-            onClick={() => onClick(answer)}
+            onClick={handleNextClick}
             className="w-[200px] h-[60px] text-[30px] ml-4"
             type="default"
           >

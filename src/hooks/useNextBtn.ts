@@ -21,7 +21,7 @@ export default function useNextBtn({
         top: 0,
         behavior: 'smooth',
       });
-      if (part < partLength) {
+      if (part < partLength - 1) {
         setPart(part + 1);
       } else {
         navigate(`/ending`);

@@ -19,8 +19,10 @@ import {
   zeroArticale,
 } from './articale';
 
-const HomePage: React.FC = () => {
+const Nina: React.FC = () => {
   const [part, setPart] = useState(0);
+
+  (window as any).setPart = setPart;
 
   const partArticle = [
     zeroArticale,
@@ -40,7 +42,7 @@ const HomePage: React.FC = () => {
     <>
       {contextHolder}
       <ArticleContainer>
-        <ArticleTitle title={`韩薇娜-${partName[part]}`} />
+        <ArticleTitle title={`韩薇娜-${partName[part]}`} color="#007fdb" />
         <ArticleContent articleList={partArticle[part]} />
         <ArticleNextBtn
           text={nextBtnName[part]}
@@ -52,4 +54,4 @@ const HomePage: React.FC = () => {
   );
 };
 
-export default HomePage;
+export default Nina;
