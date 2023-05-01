@@ -22,7 +22,7 @@ const Ending: React.FC = () => {
         }`}
       >
         <Button
-          onClick={() => window.open(`${window.location.origin}/#/nina`)}
+          onClick={() => window.open(`${window.location.origin}${window.location.pathname}#/nina`)}
           className={`${styles.ninaBtn} ${
             ninaReady && styles.active
           }  w-[300px] h-[100px] text-[50px]`}
@@ -31,7 +31,7 @@ const Ending: React.FC = () => {
           韩薇娜
         </Button>
         <Button
-          onClick={() => window.open(`${window.location.origin}/#/mika`)}
+          onClick={() => window.open(`${window.location.origin}${window.location.pathname}#/mika`)}
           className={`${styles.mikaBtn} ${
             mikaReady && styles.active
           } w-[300px] h-[100px] text-[50px]`}

@@ -25,7 +25,7 @@ export default function useNextBtn({
         setPart(part + 1);
       } else {
         localStorage.setItem(name, '1');
-        window.open(`${window.location.origin}/#/ending`);
+        window.open(`${window.location.origin}${window.location.pathname}#/ending`);
       }
     } else {
       messageApi.open({
