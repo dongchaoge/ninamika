@@ -4,6 +4,9 @@ export default defineConfig({
   title: 'Happy birthday',
   favicons: ['https://i.328888.xyz/2023/05/01/iL0inp.png'],
   publicPath: process.env.NODE_ENV === 'production' ? './' : '/',
+  history: {
+    type: 'hash',
+  },
   hash: true,
   antd: {},
   access: {},
