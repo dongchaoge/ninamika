@@ -9,7 +9,7 @@ const Ending: React.FC = () => {
   const mikaReady = !!localStorage.getItem('mika');
 
   const [ready, setReady] = useState(false);
-  console.log('ninaReady:', ninaReady);
+
   useEffect(() => {
     setReady(ninaReady && mikaReady);
   });
@@ -17,12 +17,19 @@ const Ending: React.FC = () => {
   return (
     <div className={ready ? '' : 'h-[100vh] overflow-hidden'}>
       <div
-        className={`w-[100vw] h-[100vh] transition-all duration-1000 flex items-center justify-center gap-16 ${
-          ready ? 'h-0 overflow-hidden' : ''
+        className={`w-[100vw] transition-all duration-1000 flex items-center justify-center gap-16 ${
+          ready ? 'overflow-hidden' : ''
         }`}
+        style={{
+          height: ready ? '0' : '100vh',
+        }}
       >
         <Button
-          onClick={() => window.open(`${window.location.origin}${window.location.pathname}#/nina`)}
+          onClick={() =>
+            window.open(
+              `${window.location.origin}${window.location.pathname}#/nina`,
+            )
+          }
           className={`${styles.ninaBtn} ${
             ninaReady && styles.active
           }  w-[300px] h-[100px] text-[50px]`}
@@ -31,7 +38,11 @@ const Ending: React.FC = () => {
           韩薇娜
         </Button>
         <Button
-          onClick={() => window.open(`${window.location.origin}${window.location.pathname}#/mika`)}
+          onClick={() =>
+            window.open(
+              `${window.location.origin}${window.location.pathname}#/mika`,
+            )
+          }
           className={`${styles.mikaBtn} ${
             mikaReady && styles.active
           } w-[300px] h-[100px] text-[50px]`}
