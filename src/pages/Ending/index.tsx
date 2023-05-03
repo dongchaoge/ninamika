@@ -5,19 +5,24 @@ import Observer from './Observer';
 import styles from './index.less';
 
 const Ending: React.FC = () => {
-  const ninaReady = !!localStorage.getItem('nina');
-  const mikaReady = !!localStorage.getItem('mika');
-
   const [ready, setReady] = useState(false);
+  const [ninaReady, setNinaReady] = useState(false);
+  const [mikaReady, setMikaReady] = useState(false);
 
   useEffect(() => {
-    setReady(ninaReady && mikaReady);
+    setTimeout(() => {
+      setNinaReady(!!localStorage.getItem('nina'));
+      setMikaReady(!!localStorage.getItem('mika'));
+    }, 100);
+    setTimeout(() => {
+      setReady(ninaReady && mikaReady);
+    }, 1000);
   });
 
   return (
     <div className={ready ? '' : 'h-[100vh] overflow-hidden'}>
       <div
-        className={`w-[100vw] transition-all duration-1000 flex items-center justify-center gap-16 ${
+        className={`w-[100vw] transition-all duration-[2000ms] flex items-center justify-center gap-16 ${
           ready ? 'overflow-hidden' : ''
         }`}
         style={{
@@ -25,28 +30,24 @@ const Ending: React.FC = () => {
         }}
       >
         <Button
-          onClick={() =>
-            window.open(
-              `${window.location.origin}${window.location.pathname}#/nina`,
-            )
-          }
           className={`${styles.ninaBtn} ${
             ninaReady && styles.active
           }  w-[300px] h-[100px] text-[50px]`}
           type="default"
+          style={{
+            transform: ready ? 'translate(0,-10vh)' : '',
+          }}
         >
           韩薇娜
         </Button>
         <Button
-          onClick={() =>
-            window.open(
-              `${window.location.origin}${window.location.pathname}#/mika`,
-            )
-          }
           className={`${styles.mikaBtn} ${
             mikaReady && styles.active
           } w-[300px] h-[100px] text-[50px]`}
           type="default"
+          style={{
+            transform: ready ? 'translate(0,-10vh)' : '',
+          }}
         >
           徐静珂
         </Button>
