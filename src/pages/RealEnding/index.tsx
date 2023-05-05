@@ -14,7 +14,7 @@ import styles from './index.less';
 
 // https://i.328888.xyz/2023/05/05/iTyeJv.png
 // https://i.328888.xyz/2023/05/05/iTy80V.jpeg
-const Ending: React.FC = () => {
+const RealEnding: React.FC = () => {
   return (
     <div>
       <div className={styles.endingContainer}>
@@ -66,7 +66,8 @@ const Ending: React.FC = () => {
           </div>
 
           <div className="mt-24 mb-8">
-            她为了纪念 2011年3月东日本大地震，去了一片花的海洋~
+            她为了纪念
+            2011年3月东日本大地震，走遍了世界各地，去寻找每一片花的海洋~
           </div>
           <Observer>
             <img
@@ -108,10 +109,11 @@ const Ending: React.FC = () => {
             <span>05-12</span>
             <img className="!w-1/4" src={logo} alt="" />
           </div>
+          <div className='text-4xl text-center py-8'>--- Ending is also a beginning ---</div>
         </div>
       </div>
     </div>
   );
 };
 
-export default Ending;
+export default RealEnding;
