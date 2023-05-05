@@ -144,6 +144,27 @@ const Ending: React.FC = () => {
             <img className="w-1/4" src={logo} alt="" />
           </div>
         </div>
+        <div className="text-2xl mt-12">
+          以上就是原本的结局了，也是大家所认可和追捧的结局
+          <br />
+          <br />
+          但是 Ninamika
+          是那么的热爱生命，那么的骄傲，她又怎么会把自己封印在别人的作品里面呢~
+          <br />
+          <div className="mt-12 text-right">
+            <Button
+              onClick={() => {
+                window.open(
+                  `${window.location.origin}${window.location.pathname}#/real-ending`,
+                );
+              }}
+              className={`w-[300px] h-[100px] text-[50px]`}
+              type="default"
+            >
+              实花
+            </Button>
+          </div>
+        </div>
       </div>
     </div>
   );
