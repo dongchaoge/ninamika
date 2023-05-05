@@ -39,6 +39,11 @@ export default defineConfig({
       path: '/ending',
       component: './Ending',
     },
+    {
+      name: '结尾',
+      path: '/real-ending',
+      component: './RealEnding',
+    },
   ],
 
   npmClient: 'pnpm',
