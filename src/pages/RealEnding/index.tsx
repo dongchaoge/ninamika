@@ -47,8 +47,8 @@ const RealEnding: React.FC = () => {
           <div>
             <Observer showPoint={1}>
               <div className="mt-48 mb-24">
-                <div>希望与幸福</div>
-                <div className="my-12">生命中所有短暂的美好都值得被记录</div>
+                <div>向着光的轨迹伸出手</div>
+                <div className="my-12">“就在寻求救赎的那一刹那，我们便已置身幸福。”</div>
                 <div className="text-3xl mb-8">
                   蜷川实花
                   <span className={`${styles.light} scale inline-block`}>
