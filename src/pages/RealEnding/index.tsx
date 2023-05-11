@@ -14,6 +14,12 @@ import styles from './index.less';
 
 // https://i.328888.xyz/2023/05/05/iTyeJv.png
 // https://i.328888.xyz/2023/05/05/iTy80V.jpeg
+
+// 光
+// https://i.328888.xyz/2023/05/11/iY5z0x.jpeg
+
+// 樱
+// https://i.328888.xyz/2023/05/11/iY5mDV.jpeg
 const RealEnding: React.FC = () => {
   return (
     <div>
@@ -48,7 +54,9 @@ const RealEnding: React.FC = () => {
             <Observer showPoint={1}>
               <div className="mt-48 mb-24">
                 <div>向着光的轨迹伸出手</div>
-                <div className="my-12">“就在寻求救赎的那一刹那，我们便已置身幸福。”</div>
+                <div className="my-12">
+                  “就在寻求救赎的那一刹那，我们便已置身幸福。”
+                </div>
                 <div className="text-3xl mb-8">
                   蜷川实花
                   <span className={`${styles.light} scale inline-block`}>
@@ -109,7 +117,21 @@ const RealEnding: React.FC = () => {
             <span>05-12</span>
             <img className="!w-1/4" src={logo} alt="" />
           </div>
-          <div className='text-4xl text-center py-8'>--- Ending is also a beginning ---</div>
+          <div className="text-4xl text-center py-8 mb-40">
+            --- Ending is also a beginning ---
+          </div>
+          <Observer>
+            <img
+              className="translate-top mb-8 w-45%"
+              src="https://i.328888.xyz/2023/05/11/iY5z0x.jpeg"
+            />
+          </Observer>
+          <Observer>
+            <img
+              className="translate-top mb-8 w-45%"
+              src="https://i.328888.xyz/2023/05/11/iY5mDV.jpeg"
+            />
+          </Observer>
         </div>
       </div>
     </div>
